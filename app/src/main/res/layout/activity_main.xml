@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="ru.startandroid.galleryhomework.presentation.activities.main.MainActivity"
+        android:background="@color/colorBlackProfile">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/lin1"
+            tools:ignore="MissingConstraints">
+        <TextView
+                android:id="@+id/tv_mypro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My profile"
+                android:textColor="@color/colorWhiteProfile"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/indentation_8"
+                android:textSize="20sp"
+        />
+
+        <include layout="@layout/divider"
+                 android:id="@+id/divider"
+                 app:layout_constraintTop_toBottomOf="@id/tv_mypro"/>
+
+    </LinearLayout>
+
+
+    <Button
+            android:id="@+id/btnClose"
+            android:text="Выход"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/indentation_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnGallery"
+            android:background="@color/colorGrayProfile"
+            android:textColor="@color/colorWhiteProfile"
+    />
+
+    <Button
+            android:id="@+id/btnGallery"
+            android:text="Галлерея"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/indentation_32"
+            app:layout_constraintEnd_toStartOf="@+id/glRight"
+            app:layout_constraintStart_toStartOf="@+id/glLeft"
+            app:layout_constraintTop_toBottomOf="@+id/tvOther"
+            android:onClick="openGallery"
+            tools:ignore="OnClick"
+            android:background="@color/colorGrayProfile"
+            android:textColor="@color/colorWhiteProfile"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/indentation_16"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/indentation_16"/>
+
+    <ImageView
+            android:id="@+id/ivPic"
+            android:layout_width="@dimen/view_params_150"
+            android:layout_height="@dimen/view_params_150"
+            android:layout_marginTop="@dimen/indentation_32"
+            app:layout_constraintEnd_toStartOf="@+id/glRight"
+            app:layout_constraintStart_toStartOf="@+id/glLeft"
+            app:layout_constraintTop_toBottomOf="@+id/lin1"/>
+
+    <TextView
+            android:id="@+id/tvName"
+            android:text="@string/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/indentation_16"
+            android:layout_marginLeft="@dimen/indentation_16"
+            android:layout_marginRight="@dimen/indentation_16"
+            android:gravity="center_horizontal"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/glRight"
+            app:layout_constraintStart_toStartOf="@+id/glLeft"
+            app:layout_constraintTop_toBottomOf="@+id/ivPic"
+            android:textColor="@color/colorWhiteProfile"/>
+
+    <TextView
+            android:id="@+id/tvOther"
+            android:text="@string/other"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/indentation_8"
+            android:layout_marginLeft="@dimen/indentation_16"
+            android:layout_marginRight="@dimen/indentation_16"
+            android:textSize="18dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/glRight"
+            app:layout_constraintStart_toStartOf="@+id/glLeft"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            android:textColor="@color/colorWhiteProfile"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
