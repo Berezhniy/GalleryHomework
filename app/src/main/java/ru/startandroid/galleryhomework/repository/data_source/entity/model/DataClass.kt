@@ -1,4 +1,4 @@
-package ru.startandroid.galleryhomework.model
+package ru.startandroid.galleryhomework.repository.data_source.entity.model
 
 object DataClass {
     var imageArray = arrayOf("https://images.unsplash.com/photo-1527555197883-98e27ca0c1ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
